@@ -3,7 +3,7 @@
 
 const express = require("express");
 const morgan = require("morgan");
-const projects = require("./data/projects.json")
+const projectsA = require("./data/projects.json")
 const articles = require("./data/articles.json")
 
 
@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/views/home.html")
 });
 app.get("/api/projects", (req, res) => {
-    res.json(projects)
+    res.json(projectsA)
 })
 app.get("/api/articles", (req, res)=> {
     res.json(articles);
